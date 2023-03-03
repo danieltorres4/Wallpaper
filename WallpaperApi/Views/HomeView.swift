@@ -49,7 +49,6 @@ struct HomeView: View {
                     if self.search != "" {
                         Button(action: {
                             // Searching content...
-                            
                         }) {
                             Text("Find")
                                 .fontWeight(.bold)
@@ -97,7 +96,11 @@ struct HomeView: View {
                                         .contextMenu {
                                             //Save Button
                                             Button(action: {
-                                                
+                                                SDWebImageDownloader()
+                                                    .downloadImage(with: URL(string: j.urls["small"]!)!) { image, _, _, _ in
+                                                        UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+                                                        print("The image has been saved...")
+                                                    }
                                             }) {
                                                 HStack {
                                                     Text("Save")
@@ -109,6 +112,24 @@ struct HomeView: View {
                                         }
                                 }
                             }
+                        }
+                        
+                        if !self.unsplashViewModel.images.isEmpty {
+                            //Updating images...
+                            HStack {
+                                Spacer()
+                                
+                                //Updating new images
+                                Button(action: {
+                                    self.unsplashViewModel.images.removeAll()
+                                    self.unsplashViewModel.updateData()
+                                }) {
+                                    Text("Next")
+                                        .bold()
+                                        .foregroundColor(.black)
+                                }
+                            }
+                            .padding(.horizontal, 25)
                         }
                     }
                     .padding(.top)
