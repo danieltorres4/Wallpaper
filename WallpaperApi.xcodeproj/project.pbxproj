@@ -11,6 +11,11 @@
 		BD87385E29B114AA00DDCAF3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87385D29B114AA00DDCAF3 /* ContentView.swift */; };
 		BD87386029B114AC00DDCAF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD87385F29B114AC00DDCAF3 /* Assets.xcassets */; };
 		BD87386329B114AC00DDCAF3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD87386229B114AC00DDCAF3 /* Preview Assets.xcassets */; };
+		BD87386C29B1171A00DDCAF3 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BD87386B29B1171A00DDCAF3 /* SDWebImageSwiftUI */; };
+		BD87386E29B1172A00DDCAF3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87386D29B1172A00DDCAF3 /* HomeView.swift */; };
+		BD87387029B13F9700DDCAF3 /* UnsplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87386F29B13F9700DDCAF3 /* UnsplashViewModel.swift */; };
+		BD87387329B13FCF00DDCAF3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87387229B13FCF00DDCAF3 /* Photo.swift */; };
+		BD87387629B1466400DDCAF3 /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD87387529B1466400DDCAF3 /* Indicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,10 @@
 		BD87385D29B114AA00DDCAF3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BD87385F29B114AC00DDCAF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD87386229B114AC00DDCAF3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BD87386D29B1172A00DDCAF3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BD87386F29B13F9700DDCAF3 /* UnsplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashViewModel.swift; sourceTree = "<group>"; };
+		BD87387229B13FCF00DDCAF3 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		BD87387529B1466400DDCAF3 /* Indicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD87386C29B1171A00DDCAF3 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,8 +61,10 @@
 		BD87385A29B114AA00DDCAF3 /* WallpaperApi */ = {
 			isa = PBXGroup;
 			children = (
+				BD87387429B1407200DDCAF3 /* ViewModels */,
+				BD87387129B13FBD00DDCAF3 /* Models */,
+				BD87386929B115BB00DDCAF3 /* Views */,
 				BD87385B29B114AA00DDCAF3 /* WallpaperApiApp.swift */,
-				BD87385D29B114AA00DDCAF3 /* ContentView.swift */,
 				BD87385F29B114AC00DDCAF3 /* Assets.xcassets */,
 				BD87386129B114AC00DDCAF3 /* Preview Content */,
 			);
@@ -65,6 +77,32 @@
 				BD87386229B114AC00DDCAF3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BD87386929B115BB00DDCAF3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD87385D29B114AA00DDCAF3 /* ContentView.swift */,
+				BD87386D29B1172A00DDCAF3 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD87387129B13FBD00DDCAF3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD87387229B13FCF00DDCAF3 /* Photo.swift */,
+				BD87387529B1466400DDCAF3 /* Indicator.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD87387429B1407200DDCAF3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				BD87386F29B13F9700DDCAF3 /* UnsplashViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +121,9 @@
 			dependencies = (
 			);
 			name = WallpaperApi;
+			packageProductDependencies = (
+				BD87386B29B1171A00DDCAF3 /* SDWebImageSwiftUI */,
+			);
 			productName = WallpaperApi;
 			productReference = BD87385829B114AA00DDCAF3 /* WallpaperApi.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +152,9 @@
 				Base,
 			);
 			mainGroup = BD87384F29B114A900DDCAF3;
+			packageReferences = (
+				BD87386A29B1171A00DDCAF3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = BD87385929B114AA00DDCAF3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +181,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD87387029B13F9700DDCAF3 /* UnsplashViewModel.swift in Sources */,
+				BD87387629B1466400DDCAF3 /* Indicator.swift in Sources */,
+				BD87386E29B1172A00DDCAF3 /* HomeView.swift in Sources */,
 				BD87385E29B114AA00DDCAF3 /* ContentView.swift in Sources */,
 				BD87385C29B114AA00DDCAF3 /* WallpaperApiApp.swift in Sources */,
+				BD87387329B13FCF00DDCAF3 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +385,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD87386A29B1171A00DDCAF3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD87386B29B1171A00DDCAF3 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD87386A29B1171A00DDCAF3 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD87385029B114A900DDCAF3 /* Project object */;
 }
